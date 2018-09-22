@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="favicon.ico"/>
+		<title>@REMARK_TITLE@</title>
+		<script src="scripts/jquery.min.js"></script>
+		<style>
+			@import url("@REMARK_STYLE@");
+		</style>
+	</head>
+<body>
+		<textarea id="source">
+@REMARK_CONTENT@
+		</textarea>
+		<script src="scripts/remark-latest.min.js"></script>
+		<script>
+			var hljs = remark.highlighter.engine;
+		</script>
+		@REMARK_LANGUAGES@
+		@REMARK_SCRIPT@
+		<script>
+			var slideshow = remark.create({
+				ratio: '16:9',
+				countIncrementalSlides: false,
+				highlightLanguage: 'cpp',
+				highlightStyle: 'monokai',
+				highlightLines: true,
+				highlightSpans: true,
+				slideNumberFormat: '%current%'
+			});
+		</script>
+		<script src="scripts/laser_ptr.js"></script>
+	</body>
+</html>
