@@ -31,5 +31,6 @@ add_remark_slides(example_presentation ALL
     RESOURCES
         img/questions.jpg
         img/train-it.png
+        img/train-it-style.png
         img/warning.png
 )

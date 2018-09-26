@@ -5,6 +5,6 @@ class: title-slide
 ## `https://github.com/train-it-eu/remark-cmake`
 
 Mateusz Pusz  
-September 25, 2018
+September 27, 2018
 
 ---
