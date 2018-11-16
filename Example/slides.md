@@ -5,7 +5,7 @@ class: title-slide
 ## `https://github.com/train-it-eu/remark-cmake`
 
 Mateusz Pusz  
-September 27, 2018
+November 16, 2018
 
 ---
 
@@ -43,7 +43,7 @@ class: title-slide
 ## `https://github.com/mpusz/remark-cmake`
 
 Mateusz Pusz  
-September 27, 2018
+November 16, 2018
 
 ---
 
@@ -76,7 +76,7 @@ September 27, 2018
 2. Define your favorite _presentation style and layout_
 --
 
-3. If needed fix or add custom language highlighting
+3. If needed, fix or add custom language highlighting
 --
 
 4. Prepare presentation content as a _Markdown file_
