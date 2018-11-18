@@ -40,7 +40,7 @@ class: title-slide
 
 # How to create slides about CMake with CMake?
 
-## `https://github.com/mpusz/remark-cmake`
+## `https://github.com/train-it-eu/remark-cmake`
 
 Mateusz Pusz  
 November 16, 2018
