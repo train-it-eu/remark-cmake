@@ -29,5 +29,5 @@ Useful for PDF files generation
 
 ## Example presentations
 
-- [How to create slides about CMake with CMake?](Slides_about_CMake_with_CMake/Slides_about_CMake_with_CMake.html)
-- [cmake.remark API Reference](api_reference/api_reference.html)
+- [How to create slides about CMake with CMake?](https://train-it-eu.github.io/remark-cmake/Slides_about_CMake_with_CMake/Slides_about_CMake_with_CMake.html)
+- [cmake.remark API Reference](https://train-it-eu.github.io/remark-cmake/api_reference/api_reference.html)
