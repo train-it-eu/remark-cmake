@@ -26,3 +26,8 @@ Useful for PDF files generation
 - If needed, fix or add custom language highlighting
 - Prepare presentation content as a Markdown file
 - Aggregate all above in one CMake project
+
+## Example presentations
+
+- [How to create slides about CMake with CMake?](Slides_about_CMake_with_CMake/Slides_about_CMake_with_CMake.html)
+- [cmake.remark API Reference](api_reference/api_reference.html)
