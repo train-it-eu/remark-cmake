@@ -23,19 +23,19 @@
 set(TRAINING_NAME "api_reference")
 
 add_remark_chapter(${TRAINING_NAME}_chapter_title
-    BASE_DIR "1 - Title"
+    BASE_DIR "1_title"
     MARKDOWN_SLIDES
         slides.md
 )
 
 add_remark_chapter(${TRAINING_NAME}_chapter_api
-    BASE_DIR "2 - API Reference"
+    BASE_DIR "2_api_reference"
     MARKDOWN_SLIDES
         slides.md
 )
 
 add_remark_chapter(${TRAINING_NAME}_chapter_end
-    BASE_DIR "3 - End"
+    BASE_DIR "3_end"
     MARKDOWN_SLIDES
         slides.md
     RESOURCES

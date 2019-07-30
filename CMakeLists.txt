@@ -31,5 +31,5 @@ include(remark)
 add_subdirectory(remark.js)
 
 # presentation definitions
-add_subdirectory("API Reference")
-add_subdirectory("Example")
+add_subdirectory("api_reference")
+add_subdirectory("example")
