@@ -393,17 +393,17 @@ foreach(res \${resources})
 endforeach()
 
 # concatenate slides into one big file
-file(WRITE slides.md)
+file(WRITE \${dest_dir}/slides.md)
 foreach(md_file \${md_slides})
     file(READ \${md_file} md_content)
-    file(APPEND slides.md \"\${md_content}\")
+    file(APPEND \${dest_dir}/slides.md \"\${md_content}\")
 endforeach()
 
 # set variables used in configure file
 set(REMARK_TITLE ${add_remark_slides_TITLE})
 set(REMARK_STYLE ${style})
 set(REMARK_SCRIPT \"${script}\")
-file(READ slides.md REMARK_CONTENT)
+file(READ \${dest_dir}/slides.md REMARK_CONTENT)
 ")
 
     if(add_remark_slides_LANGUAGES)
