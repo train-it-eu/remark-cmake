@@ -21,7 +21,7 @@ Useful for PDF files generation
 
 ## How?
 
-- Download [remark.cmake](cmake/remark.cmake) script
+- Download [remark.cmake](https://github.com/train-it-eu/remark-cmake/blob/master/cmake/remark.cmake) script
 - Define your favorite presentation style and layout
 - If needed, fix or add custom language highlighting
 - Prepare presentation content as a Markdown file
