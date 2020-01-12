@@ -323,9 +323,12 @@ function(add_remark_slides target)
     endforeach()
     list(APPEND md_slides ${add_remark_slides_MARKDOWN_SLIDES})
 
+    string(MAKE_C_IDENTIFIER "${add_remark_slides_NAME}" gen_slides_identifier)
+    set(gen_slides "${CMAKE_CURRENT_BINARY_DIR}/gen_slides_${gen_slides_identifier}.cmake")
+    
     # define custom command to generate slides
     add_custom_command(OUTPUT ${dest_dir}/${add_remark_slides_NAME}.html
-        COMMAND ${CMAKE_COMMAND} -P ${CMAKE_CURRENT_BINARY_DIR}/gen_slides.cmake
+        COMMAND ${CMAKE_COMMAND} -P ${gen_slides}
         COMMAND ${CMAKE_COMMAND} -E touch ${dest_dir}/${add_remark_slides_NAME}.html
         DEPENDS
             ${CMAKE_CURRENT_LIST_FILE}
@@ -376,7 +379,7 @@ function(add_remark_slides target)
     quote(add_remark_slides_HTML_TEMPLATE ${add_remark_slides_HTML_TEMPLATE})
 
     # generate script
-    file(WRITE ${CMAKE_CURRENT_BINARY_DIR}/gen_slides.cmake "
+    file(WRITE ${gen_slides} "
 set(dest_dir ${dest_dir})
 set(resources ${resources})
 set(md_slides ${md_slides})
@@ -407,19 +410,19 @@ file(READ \${dest_dir}/slides.md REMARK_CONTENT)
 ")
 
     if(add_remark_slides_LANGUAGES)
-        file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/gen_slides.cmake "
+        file(APPEND ${gen_slides} "
 set(REMARK_LANGUAGES \"")
         foreach(l ${add_remark_slides_LANGUAGES})
             get_target_property(f ${l} FILE)
-            file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/gen_slides.cmake "<script src=\\\"${f}\\\"></script>
+            file(APPEND ${gen_slides} "<script src=\\\"${f}\\\"></script>
 		")
         endforeach()
-        file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/gen_slides.cmake "\")
+        file(APPEND ${gen_slides} "\")
 ")
     endif()
 
     if(add_remark_slides_STYLE_TEMPLATE)
-        file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/gen_slides.cmake "
+        file(APPEND ${gen_slides} "
 # generate style file
 message(STATUS \"Generating '\${dest_dir}/style.css'\")
 configure_file(${add_remark_slides_STYLE_TEMPLATE} \${dest_dir}/style.css @ONLY)
@@ -427,13 +430,13 @@ set(REMARK_STYLE style.css)
 ")
     endif()
 
-    file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/gen_slides.cmake "
+    file(APPEND ${gen_slides} "
 # generate output file with slides
 message(STATUS \"Generating '\${dest_dir}/${add_remark_slides_NAME}.html'\")
 configure_file(${add_remark_slides_HTML_TEMPLATE} \${dest_dir}/${add_remark_slides_NAME}.html @ONLY)
 ")
     if(add_remark_slides_HANDOUTS)
-        file(APPEND ${CMAKE_CURRENT_BINARY_DIR}/gen_slides.cmake "
+        file(APPEND ${gen_slides} "
 # generate handouts
 message(STATUS \"Generating '\${dest_dir}/handouts.html'\")
 string(REPLACE \"exclude: handouts\" \"exclude: true\" REMARK_CONTENT \"\${REMARK_CONTENT}\")
