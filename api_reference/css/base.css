@@ -1,0 +1,325 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+@page {
+  size: 1211px 681px;
+  margin: 0;
+}
+
+@media print {
+  .remark-slide-scaler {
+    width: 100% !important;
+    height: 100% !important;
+    transform: scale(1) !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+
+  .remark-slide-content:after {
+    -webkit-print-color-adjust: exact;
+    -webkit-filter: opacity(1);
+  }
+}
+
+/* default HTML styles */
+h1, h2, h3 {
+  font-family: 'Yanone Kaffeesatz';
+  font-weight: 800;
+  line-height: 1em;
+  color: var(--color-Text);
+}
+h1 code {
+  font-size: 1em;
+}
+p {
+  line-height: 1.3em;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.7em;
+}
+ul ul {
+  line-height: 1.5em;
+}
+ul ul ul {
+  line-height: 1.3em;
+}
+li::before {
+  padding-right: 9px;
+}
+ul > li {
+  padding-left: 1em;
+  text-indent: -.85em;
+}
+ul > li:before {
+  content: "•";
+  color: var(--color-ThemeMain);
+}
+ul ul > li:before {
+  content: "–";
+  color: var(--color-Text);
+}
+ul ul ul > li:before {
+  content: "•";
+  color: var(--color-Text);
+}
+ul > li > p {
+    display: initial;
+}
+ol > li {
+  line-height: 2em;
+}
+a {
+  color: var(--color-ThemeMain);
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+strong {
+  color: var(--color-ThemeMain);
+}
+em {
+  color: var(--color-ThemeMain);
+}
+pre {
+  margin: 0.75em 0px;
+}
+
+img {
+  display: block;
+  max-width:1100px;
+  max-height:471px;
+  width: auto;
+  height: auto;
+  margin: 15px;
+}
+.center img {
+  margin-left: auto;
+  margin-right: auto;
+}
+.right img {
+  float: right;
+  margin: 10px 0px 10px 50px;
+}
+
+/* default remark slide style */
+.remark-slide {
+  padding-top: 100px;
+  padding-bottom: 40px;
+  background-color: var(--color-White);
+}
+.remark-slide-content {
+  font-family: 'Droid Serif';
+  font-size: 1.6em;
+  color: var(--color-Text);
+  display: block;
+  position: relative;
+  height: 471px;
+  margin: 35px 50px;
+  padding: 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.remark-slide-content h1 {
+  position: fixed;
+  display: -webkit-inline-box;
+  margin: 0px;
+  padding: 0px 40px 0px 40px;
+  top: 0px;
+  left: 0px;
+  height: 100px;
+  width: 1130px;
+  -webkit-box-align: center;
+  font-size: 2em;
+}
+.remark-slide-content h2, .remark-slide-content h3 {
+  font-size: 1.5em;
+}
+.remark-slide-number {
+  position: fixed;
+  color: var(--color-FooterText);
+  font-size: 0.65em;
+  right: 50px;
+}
+
+/* title slide */
+.title-slide {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 131px;
+  width: 1120px;
+  padding: 550px 0px 0px 90px;
+  margin: 0px;
+  color: var(--color-White);
+  font-weight: bold;
+  background-size: cover !important;
+  background: var(--color-Graphite);
+}
+.title-slide h1, .title-slide h2 {
+  position: absolute;
+  color: var(--color-White);
+  background-color: initial;
+  padding: 0px;
+}
+.title-slide h1 {
+  position: absolute;
+  margin-right: 170px;
+  top: 240px;
+  left: 90px;
+  height: initial;
+  width: initial;
+  font-size: 3em;
+  box-shadow: none;
+}
+.title-slide h2 {
+  margin-right: 250px;
+  top: 440px;
+  left: 90px;
+  font-size: 1.1em;
+}
+.title-slide .remark-slide-number {
+  display: none;
+}
+
+/* section title style */
+.section-title-slide {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  color: var(--color-ThemeMain);
+  background-size: cover;
+}
+.section-title-slide .remark-slide-number {
+  display: none;
+}
+.section-title-slide h1, .section-title-slide h2 {
+  display: initial;
+  position: absolute;
+  left: 100px;
+  color: var(--color-White);
+  background-color: var(--color-ThemeMain);
+}
+.section-title-slide h1 {
+  top: 380px;
+  height: initial;
+  width: initial;
+  padding: 10px 20px;
+  font-size: 2.3em;
+  box-shadow: none;
+}
+.section-title-slide h2 {
+  top: 300px;
+  padding: 5px 10px;
+  font-size: 1em;
+}
+.section-title-slide a {
+  color: var(--color-White);
+}
+
+/* two-column layout */
+.left-column {
+  width: 48%;
+  float: left;
+  margin-top: 15px;
+}
+.left-column > :first-child {
+  margin-top: 0px;
+}
+.remark-slide-content > .left-column {
+  margin-top: 0px;
+}
+.right-column {
+  width: 48%;
+  float: right;
+  margin-top: 15px;
+}
+.right-column > :first-child {
+  margin-top: 0px;
+}
+.remark-slide-content > .right-column {
+  margin-top: 0px;
+}
+
+/* code style */
+.remark-code, .remark-inline-code {
+  font-family: 'Ubuntu Mono';
+}
+.remark-code-span-highlighted {
+  background-color: #373832;
+  padding: 1px 0px 2px 0px;
+}
+.remark-code-line-highlighted {
+  background-color: #373832;
+}
+.text > .remark-code-span-highlighted {
+  background-color: rgba(255,255,0,0.5);
+}
+.text > .remark-code-line-highlighted {
+  background-color: rgba(255,255,0,0.5);
+}
+.remark-code {
+  text-indent: 0px;
+  line-height: initial;
+  font-size: 0.9em;
+}
+.remark-inline-code {
+  font-weight: bold;
+}
+
+.left-column .remark-code, .right-column .remark-code {
+  font-size: 0.85em;
+}
+.big-code .remark-code {
+  font-size: 1.4em;
+}
+.normal-code .remark-code {
+  font-size: 1.0em;
+}
+.small-code .remark-code {
+  font-size: 0.7em;
+}
+
+/* slide info box */
+.info {
+  display: block;
+  left: 50px;
+  right: 50px;
+  background: var(--color-Info);
+  padding: 20px;
+  margin: 30px 0;
+  font-size: 1.5em;
+  color: var(--color-White);
+}
+.info em, .info strong, .info a {
+  color: var(--color-White);
+}
+.info strong {
+  text-decoration: underline;
+}
+
+/* laser style */
+#laser {
+  pointer-events: none;
+  display: none;
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  border-radius: 5px;
+  background-color: rgb(51, 255, 119);
+  box-shadow: 0px 0px 20px 5px rgb(51, 255, 119);
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
